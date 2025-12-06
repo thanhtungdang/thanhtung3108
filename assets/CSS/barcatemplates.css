@@ -1,0 +1,544 @@
+
+/*===========
+HEADER_AREA 
+============*/
+.header_area {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 82px;
+    transition: all 0.5s ease;
+}
+
+.header_navbar{
+background: linear-gradient(90deg, #600028, #001A3A);
+    padding-top: 6px; padding-bottom: 6px;
+}
+
+
+/* ============================
+   FLEX CHO 3 PHẦN: TRÁI - GIỮA - PHẢI
+============================ */
+.header_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+         
+/* ========= TRÁI: LOGO ========= */
+.header-left {
+    flex: 0 0 auto;          /* logo không giãn */
+    display: flex;
+    align-items: center;
+}
+
+.thumblogo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 5px;               /* khoảng cách logo & chữ */
+}
+
+.thumblogo .logobarca {
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+}
+
+.thumblogo .logo-text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+}
+
+.thumblogo .logo-text h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ddd;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* ========= GIỮA: MENU ========= */
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* menu luôn ở giữa */
+}
+
+.header-center .navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-center .nav-link {
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.header-center .nav-link:hover,
+.header-center .nav-link.active {
+    color: #ccc;
+}
+
+/* Dropdown menu */
+.header-center .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header-center .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.header-center .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: #2a2a2a;
+    text-decoration: none;
+}
+
+.header-center .dropdown-menu li a:hover {
+    background-color: #fff;
+    color: #888;
+}
+
+/* ========= PHẢI: ICON ========= */
+.header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right .nav-link {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ========= NÚT TOGGLE (mobile) ========= */
+.navbar-toggler {
+    border: none;
+    color: #fff;
+}
+
+
+
+
+/*HOVER COLLECTION*/
+.nav-item.dropdown .nav-link:hover {
+    color: #ff0000; /* chữ đỏ khi hover */
+    background-color: #f8f9fa; /* nền sáng khi hover */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* nền xanh khi hover */
+    color: #fff; /* chữ trắng */
+}
+/* Chỉ trên desktop */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
+}
+
+
+.nav-item.dropdown .nav-link,
+.dropdown-menu .dropdown-item {
+    transition: all 0.3s ease;
+}
+
+/* Chỉ trên desktop */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
+}
+
+
+/*BUTTON*/
+.main_border_button a{
+    font-size: 13px;
+    color: #fff;
+    border: 1px solid;
+    padding: 12px 25px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.main_border_button a:hover{
+    background-color: #fff;
+    color :#2a2a2a;
+}
+
+
+
+
+/*BANNER*/
+/* BANNER right */
+
+
+.main_banner {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+/*lui*/
+.main_banner .container-fluid{
+    padding: 20px;
+}
+
+.main_banner .left_content .thumB img {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.main_banner .left_content .inner_content {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main_banner .left_content .inner_content h4 {
+    color: #fff;
+  margin-top: -10px;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.main_banner .left_content .inner_content span {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+    color:yellow;
+}
+
+.main_banner .left_content .thumB {
+    position: relative; /* Quan trọng */
+}
+
+
+/* BANNER RIGHT */
+
+/*chọn các phần tử lớp right_first_image*/
+.main_banner .right_content .right_first_image{
+    margin-bottom: 28.5px;
+}
+
+/*chọn các phần tử lớp thumB
+    +inner_content.
+    +hover_content.
+    +img
+*/
+.main_banner .right_content .right_first_image .thumB{
+    position: relative; /* lớp này dùng để cho lớp con căn theo. */
+    text-align: center;
+}
+
+.main_banner .right_content .right_first_image .thumB img{
+    width: 100%;    /* ảnh rộng 100% theo khung thumB  */
+    overflow: hidden;   /* cắt phần thừa ảnh vượt qua khung thumB */
+}
+
+
+/* đè lên theo thuộc tính relative
+    +Khung này căn giữa khung thumB.
+    +
+ */
+.main_banner .right_content .right_first_image .thumB .inner_content{
+    position: absolute;     
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+
+.main_banner .right_content .right_first_image .thumB .inner_content h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.main_banner .right_content .right_first_image .thumB .inner_content span{
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    font-style: italic;   
+}
+
+/* HOVET_CONTENT
+    Khối hover_content đè lên lơp thumB
+    + Căn đều ở giữa với lớp thumB 15px.
+    + Background đen.
+    + Lớp phủ trong suốt(Opacity).
+    + Ẩn lớp phủ khỏi màn hình.
+    + Tạo chuyển động mượt 0.5s.
+*/
+.main_banner .right_content .right_first_image .thumB .hover_content{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: 15px; 
+    bottom: 15px;
+    text-align: center;
+    background-color: rgba(42,42,42,.97);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+/*  HOVER_CONTENT:hover
+    +Khi rê chuột vào Opacity: 1 - hiện ra rõ ràng.
+    +Cho phép phần tử được nhìn thấy và tương tác.
+*/
+.main_banner .right_content .right_first_image .thumB:hover .hover_content{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.main_banner .right_content .right_first_image .thumB .hover_content .INNER{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.main_banner .right_content .right_first_image .thumB .hover_content h4{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.main_banner .right_content .right_first_image .thumB .hover_content p{
+    color: #fff;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+
+/*KIT BANNER*/
+#kits {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+
+#kitsbanner .thumbbanner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#kitsbanner .thumbbanner .kit_title{
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 78px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#kitsbanner .thumbbanner a .banner_border_button{
+    font-size: 25px;
+    color: black;
+    background-color:#fbc43f;
+    padding: 12px 25px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+#kitsbanner .thumbbanner a .banner_border_button:hover{
+    background-color: #fb9d3f;
+    color: black;
+}
+
+#xmas{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#xmasbanner img {
+    height: 700px; /* chỉnh theo ý bạn */
+    width: 100%;
+    object-fit: cover; /* crop ảnh cho đẹp */
+}
+
+#xmasbanner .thumbbanner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#xmasbanner .thumbbanner .kit_title{
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 78px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#xmasbanner .thumbbanner a .banner_border_button{
+    font-size: 25px;
+    color: black;
+    background-color:#fbc43f;
+    padding: 12px 25px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+#xmasbanner .thumbbanner a .banner_border_button:hover{
+    background-color: #fb9d3f;
+    color: black;
+}
+
+body {
+    background-color:rgb(25, 19, 44);
+    color: white;
+}
+
+
+
+
+/*FOOTER*/
+footer {
+    margin-top: 60px;
+    padding: 30px 0px 30px 0px;
+    background-color: #2a2a2a;
+}
+
+footer .text p {
+    font-size: 200px;
+    line-height: 300px;
+}
+
+footer .logo{
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+footer .logo span{
+    font-size: 30px;
+    color:darkslateblue;
+}
+
+footer .thumblogo{
+    padding: 20px;
+    padding-top: 0px;
+}
+
+
+footer ul li{
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer ul li a{
+    font-size: 14px;
+    color: white;
+    transition: all .3s;
+}
+
+footer ul li a:hover{
+    color:red;
+}
+
+footer h4{
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+footer .upper-footer{
+    margin-top: 10px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+footer .gradient-static {
+  font-size: clamp(90px, 9vw, 500px);
+  font-weight: 700;
+  line-height: 1.5;
+  background: linear-gradient(90deg, #A50044, #004D98, #A50044);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientMove 4s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+
+
+
+
+footer .under-footer{
+    margin-top: 30px;
+    padding-top: 30px;
+    text-align: center;
+    border-top: 1px solid rgba(250,250,250,0.3);
+}
+
+footer .under-footer ul{
+    margin-top:20 px;
+}
+
+footer .under-footer ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+footer .under-footer ul li a{
+    font-size: 22px;
+}
+
+footer .under-footer p{
+    color: #fff;
+    font-size:14px;
+    font-weight: 300;
+}
+
+footer .under-footer a{
+    color:white;
+}
+
+footer .under-footer a:hover{
+    color:red;
+}
+
