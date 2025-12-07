@@ -249,7 +249,11 @@ footer .thumblogo{
     padding: 20px;
     padding-top: 0px;
 }
-
+footer ul{
+    padding-left: 0px;
+    margin-left: 0px ;
+    
+}
 
 footer ul li{
     display: block;

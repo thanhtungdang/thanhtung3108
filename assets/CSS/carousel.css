@@ -4,7 +4,7 @@
 
 .carousel-item img{
     width: 100%;
-    height: 370px;       /* chiều cao bạn muốn */
+    height: 370px;      /* chiều cao bạn muốn */
     object-fit: cover;   /* crop ảnh lại cho đẹp */
 }
 
@@ -19,8 +19,6 @@
     height: 50px;
     background: rgba(0,0,0,0.4);
     border-radius: 8%; /*vuông*/
-    left: -60px;
-
 }
 .carousel-control-next {
     top: 50%;
@@ -29,7 +27,6 @@
     height: 50px;
     background: black; /* nền đen mờ */
     border-radius: 8%; /*vuông*/
-    right: -60px;
 }
 
 

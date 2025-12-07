@@ -384,43 +384,42 @@ background: linear-gradient(90deg, #600028, #001A3A);
 #xmas{
     padding-top: 10px;
     padding-bottom: 10px;
+    overflow: hidden;
 }
 
-#xmasbanner img {
-    height: 700px; /* chỉnh theo ý bạn */
-    width: 100%;
-    object-fit: cover; /* crop ảnh cho đẹp */
+#xmasbanner .img_thumb{
+    position: relative;
+    overflow: hidden;
 }
 
-#xmasbanner .thumbbanner{
+#xmasbanner .img_text{
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7)
 }
 
-#xmasbanner .thumbbanner .kit_title{
-    font-size: 72px;
-    font-weight: 500;
-    line-height: 78px;
-    text-align:center;
-    text-transform: uppercase;
+
+#xmasbanner img {
+    height: 500px; /* chỉnh theo ý bạn */
+    width: 100%;
+    object-fit: cover; /* crop ảnh cho đẹp */
+    border-radius: 5%;
+    transition: 0.4s ease;
 }
 
-#xmasbanner .thumbbanner a .banner_border_button{
-    font-size: 25px;
-    color: black;
-    background-color:#fbc43f;
-    padding: 12px 25px;
-    display: inline-block;
-    font-weight: 500;
-    transition: all .3s;
+#xmasbanner img:hover{
+    transform: translateY(-5px) scale(1.05);
 }
 
-#xmasbanner .thumbbanner a .banner_border_button:hover{
-    background-color: #fb9d3f;
-    color: black;
+#xmasbanner p{
+    display: block;
 }
+
 
 body {
     background-color:rgb(25, 19, 44);
@@ -442,31 +441,24 @@ footer .text p {
     line-height: 300px;
 }
 
-footer .logo{
-    margin-bottom: 15px;
-    margin-left: 20px;
-}
-
-footer .logo span{
-    font-size: 30px;
-    color:darkslateblue;
-}
-
-footer .thumblogo{
-    padding: 20px;
-    padding-top: 0px;
+footer ul{
+    padding-left: 0px;
+    margin-left: 0px ;
+    
 }
 
 
 footer ul li{
     display: block;
     margin-bottom: 10px;
+    
 }
 
 footer ul li a{
     font-size: 14px;
     color: white;
     transition: all .3s;
+    text-decoration: none;
 }
 
 footer ul li a:hover{
