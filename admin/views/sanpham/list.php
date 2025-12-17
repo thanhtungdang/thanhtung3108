@@ -24,13 +24,14 @@ include_once("views/layouts/header.php");
                 <table class="table table-striped" id="table1">
                     <thead>
                         <tr>
-                            <th class="col-1">Id</th>
+                            <th class="col-0.5">Id</th>
                             <th class="col-1">Danh mục</th>
                             <th class="col-2">Tên sản phẩm</th>
+                            <th class="col-2">Size</th>
                             <th class="col-1">Giá sp</th>
                             <th class="col-2">Ảnh</th>
-                            <th class="col-3">Mô tả</th>
-                            <th class="col-2">Hành động</th>
+                            <th class="col-1">Mô tả</th>
+                            <th class="col-3">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +40,7 @@ include_once("views/layouts/header.php");
                                 <td><?= $item['id'] ?></td>
                                 <td><?= $item['tendanhmuc'] ?></td>
                                 <td><?= $item['name'] ?></td>
+                                <td><?= $item['size'] ?></td>
                                 <td><?= $item['price'] ?></td>
                                 <td><img width="100px" src="./<?= $item['img'] ?>" alt=""></td>
                                 <td><?= $item['mota'] ?></td>

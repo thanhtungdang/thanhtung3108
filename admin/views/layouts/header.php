@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý cửa hàng bánh</title>
-    <link rel="icon" type="image/x-icon" href="views/img/logo.jpg">
+    <link rel="icon" type="image/x-icon" href="views/img/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="views/assets/css/bootstrap.css">
@@ -26,7 +26,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="http://localhost/duanbanh/index.php?action=home"><img src="views/assets/images/logo/logo.jpg" alt="Logo" style="width:150px; height:auto;"></a>
+                            <a href="http://localhost/duanbanh/index.php?action=home"><img src="views/assets/images/logo/logo.png" alt="Logo" style="width:150px; height:auto;"></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>

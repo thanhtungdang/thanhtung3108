@@ -5,70 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLAUGRANA</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!--css rieng-->
-  <link rel="stylesheet" href="assets/CSS/barcatemplates.css">
-  <link rel="stylesheet" href="assets/CSS/carousel.css">
+  <link rel="stylesheet" href="views/assets/CSS/barcatemplates.css">
+  <link rel="stylesheet" href="views/assets/CSS/carousel.css">
 
-  <!--Boostrap JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-<header class="header_area">
-  <nav class="navbar navbar-expand-lg navbar-dark header_navbar">
-    <div class="container-fluid">
-
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/logo.png" class="logobarca me-2" style="height: 50px;">
-        <div class="logo-text">
-          <h2 class="mb-0">BLAUGRANA</h2>
-          <h6 class="mb-0">OFFICIAL STORE</h6>
-        </div>
-      </a>
-
-      <!-- Toggle mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- MENU + ICONS -->
-      <div class="collapse navbar-collapse" id="mainNavbar">
-
-        <!-- Menu giữa -->
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#top">HOME</a></li> 
-          <li class="nav-item"><a class="nav-link" href="kit.html">KITS</a></li>
-          <li class="nav-item"><a class="nav-link" href="xmas.html">CHRISTMAS GUIDE</a></li>
-          <li class="nav-item"><a class="nav-link" href="trainning.html">TRANNING</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">COLLECTION</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item">Calendar</a></li>
-              <li><a class="dropdown-item">Bags</a></li>
-              <li><a class="dropdown-item">Cap</a></li>
-            <li><a class="dropdown-item">Anniversary Gift</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Icons phải -->
-        <ul class="navbar-nav header-right ms-lg-2">
-          <li class="nav-item"><a class="nav-link"><i class="fa-solid fa-user"></i></a></li>
-          <li class="nav-item"><a class="nav-link"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-</header>
+<?php 
+include_once("layouts/header.php")
+?>
 
 
 
@@ -80,7 +30,7 @@
             <div class="col-lg-6">
                 <div class="left_content">
                     <div class="thumB">
-                        <img src="assets/images/anhmainkit.jpg">
+                        <img src="views/assets/images/anhmainkit.jpg">
                         <div class="inner_content">                    
                             <span>AWAY COLLECTION</span>
                             <h4>BACK IN STOCK</h4>
@@ -118,7 +68,7 @@
                                         
                                     </div>
                                     <!--anh-->
-                                    <img src="assets/images/anhao0.jpg">
+                                    <img src="views/assets/images/anhao0.jpg">
                                 </div>
                             </div>
                         </div>
@@ -140,7 +90,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/images/anhao1.jpg">
+                                    <img src="views/assets/images/anhao1.jpg">
                                 </div>
                             </div>
                         </div>
@@ -162,7 +112,7 @@
                                             </div>
                                         </div>    
                                     </div>
-                                    <img src="assets/images/anhao2.jpg">
+                                    <img src="views/assets/images/anhao2.jpg">
                                 </div>
                             </div>
                         </div>
@@ -183,7 +133,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/images/anhao3.jpg">
+                                    <img src="views/assets/images/anhao3.jpg">
                                 </div>
                             </div>
                         </div>
@@ -198,7 +148,7 @@
 <!--KITS-->
 <section class="section" id="kitsbanner">
     <div class="container-fluid position-relative p-0">
-        <img src="assets/images/anhkitto.png" class="img-fluid w-100" alt="Banner">
+        <img src="views/assets/images/anhkitto.png" class="img-fluid w-100" alt="Banner">
         <div class="thumbbanner  position-absolute top-50 start-50 translate-middle">
             <div class="kit_title">
                 <strong>KITS</strong>
@@ -222,16 +172,16 @@
             <div class="carousel-item active">
                 <div class="d-flex">
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit1.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit1.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit2.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit2.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit3.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit3.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit4.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit4.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -240,16 +190,16 @@
             <div class="carousel-item">
                 <div class="d-flex">
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit5.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit5.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit6.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit6.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit7.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit7.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit8.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit8.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -258,16 +208,16 @@
             <div class="carousel-item">
                 <div class="d-flex">
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit9.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit9.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit10.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit10.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit11.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit11.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhkit12.png" class="d-block w-100">
+                        <img src="views/assets/images/anhkit12.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -299,19 +249,19 @@
         <div class="row g-3"> 
             <div class="col-lg-4 col-md-6">
                 <div class="img_thumb">
-                    <img src="assets/images/anhxmas4.png" class="img-fluid w-100">
+                    <img src="views/assets/images/anhxmas4.png" class="img-fluid w-100">
                     <div class="img_text">KIT COLLECTION</div>
                 </div>       
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="img_thumb">
-                    <img src="assets/images/anhcollection2.png" class="img-fluid w-100">
+                    <img src="views/assets/images/anhcollection2.png" class="img-fluid w-100">
                     <div class="img_text">ACCESSORYIES</div>
                 </div>       
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="img_thumb">
-                    <img src="assets/images/anhcollection1.png" class="img-fluid w-100">
+                    <img src="views/assets/images/anhcollection1.png" class="img-fluid w-100">
                     <div class="img_text">SOUVERNIRS</div>
                 </div>       
             </div>
@@ -330,16 +280,16 @@
             <div class="carousel-item active">
                 <div class="d-flex">
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas1.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas1.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas2.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas2.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas3.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas3.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas4.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas4.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -348,16 +298,16 @@
             <div class="carousel-item">
                 <div class="d-flex">
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas5.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas5.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas6.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas6.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas7.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas7.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas8.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas8.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -366,16 +316,16 @@
             <div class="carousel-item">
                 <div class="d-flex">
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas9.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas9.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas10.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas10.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas11.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas11.png" class="d-block w-100">
                     </div>
                     <div class="col-3 px-1">
-                        <img src="assets/images/anhxmas12.png" class="d-block w-100">
+                        <img src="views/assets/images/anhxmas12.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -395,94 +345,9 @@
 </div>
 </section>
 
-<footer>
-    <div class="container-fluid">
-        <div class="row">
-            
-            <div class="container-fluid text">
-                    <div class="upper-footer gradient-static">
-                        <P>FC BARCELONA</P>
-                    </div>
-            </div>
-
-
-            <div class="col-lg col-md-6 col-sm-12">
-                    <h4>ADDRESS</h4>
-                    <ul>
-                        <li><a href="https://goo.gl/maps/Ut4tEY2Qspm9dWkL8" target="_blank">Address: Carrer d’Arístides Maillol, 12, 08028 Barcelona, Spain</a></li>
-                        <li><a href="tel:+34934963600">Tel: +34 934 963 600</a></li>
-                    </ul>
-            </div>
-
-            <div class="col-lg col-md-6 col-sm-12">
-                    <h4>HELP &INFORMATION</h4>
-                    <ul>
-                        <li><a href="#">Odrer status</a></li>
-                        <li><a href="#">Return Portal</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Orders</a></li>
-                        <li><a href="#">Shipping delivery</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Payment options</a></li>
-                        <li><a href="#">Memberd and Supporters'Club</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Store Finder</a></li>
-                    </ul>
-            </div>
-            
-            <div class="col-lg col-md-6 col-sm-12">
-                    <h4>LINK OF INTEREST</h4>
-                    <ul>
-                        <li><a href="#">APP FC Barcelona IOS</a></li>
-                        <li><a href="#">APP FC Barcalona Android</a></li>
-                    </ul>
-            </div>
-            
-            <div class="col-lg col-md-6 col-sm-12">
-                    <h4>SOCIAL MEDIA</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Sportify</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Instagram FC Barcelona</a></li>
-                        <li><a href="#">Instagram FC Barcelona Store</a></li>
-                        <li><a href="#">OneFootBall</a></li>
-                        <li><a href="#">TikTok</a></li>
-                    </ul>
-            </div>
-
-            <div class="col-lg col-md-6 col-sm-12">
-                    <h4>PRIVACY AND USE</h4>
-                    <ul>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Purchase conditions</a></li>
-                        <li><a href="#">Cookie policy</a></li>
-                        <li><a href="#">Accessibilly</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
-            </div>
-
-            <div class="col-lg-12">
-                    <div class="under-footer">
-                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
-                        
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a></p>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                    </div>
-            </div>
-
-        </div>
-
-    </div>
-</footer>
+<?php 
+include_once("layouts/footer.php")
+?>
 
 </body>
 </html>
