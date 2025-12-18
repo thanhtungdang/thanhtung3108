@@ -1,0 +1,118 @@
+/* ===== PRODUCT DETAILS - BARCA STYLE ===== */
+.product-details {
+  background: #0a1a2f; /* xanh navy */
+  padding: 60px 0;
+  color: #fff;
+}
+
+.product__details__pic {
+  background: #081423;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product__details__pic__item--large {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* TEXT */
+.product__details__text h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffd700; /* vàng Barca */
+  text-transform: uppercase;
+}
+
+.product__details__price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e10600; /* đỏ Barca */
+  margin-bottom: 20px;
+}
+
+.product__details__text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #dcdcdc;
+  margin-bottom: 25px;
+}
+
+/* QUANTITY */
+.product__details__quantity {
+  margin-bottom: 25px;
+}
+
+.pro-qty {
+  width: 120px;
+  height: 45px;
+  border: 1px solid #ffd700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #081423;
+}
+
+.pro-qty input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}
+
+/* BUTTON */
+.primary-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #004d98, #a50044);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(90deg, #a50044, #004d98);
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* HEART ICON */
+.heart-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: #081423;
+  border: 1px solid #ffd700;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  color: #ffd700;
+  transition: 0.3s;
+}
+
+.heart-icon:hover {
+  background: #e10600;
+  color: #fff;
+  border-color: #e10600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .product__details__text h3 {
+    font-size: 24px;
+  }
+
+  .product__details__price {
+    font-size: 22px;
+  }
+}

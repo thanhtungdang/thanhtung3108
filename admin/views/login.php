@@ -26,7 +26,7 @@ if (!isset($_SESSION)) session_start();
                 <div id="auth-left">
                     <div class="auth-logo">
                         <a href="http://localhost/duanbanh/index.php?action=home">
-                            <img src="views/assets/images/logo.jpg" alt="Logo">
+                            <img src="//store.fcbarcelona.com/cdn/shop/t/9/assets/logo-simple-white.svg?v=15706832919691285971675422275" alt="Logo">
                         </a>
                     </div>
                     <h1 class="auth-title">Log in.</h1>

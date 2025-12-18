@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="views/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="views/assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="views/assets/css/app.css">
-    <link rel="shortcut icon" href="views/assets/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="views/assets/images/logo/logo.png" type="image/x-icon">
 
 </head>
 
@@ -26,7 +26,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="http://localhost/duanbanh/index.php?action=home"><img src="views/assets/images/logo/logo.png" alt="Logo" style="width:150px; height:auto;"></a>
+                            <a href="http://localhost/thanhtung3108"><img src="//store.fcbarcelona.com/cdn/shop/t/9/assets/logo-simple-white.svg?v=15706832919691285971675422275" alt="Logo" style="width:150px; height:auto;"></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>

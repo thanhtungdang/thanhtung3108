@@ -1,13 +1,16 @@
+<head>
+      <link rel="shortcut icon" href="views/assets/images/logo/logo.png" type="image/x-icon">
+</head>
 <header class="header_area">
   <nav class="navbar navbar-expand-lg navbar-dark header_navbar">
     <div class="container-fluid">
 
       <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/logo.png" class="logobarca me-2" style="height: 50px;">
+      <a class="navbar-brand d-flex align-items-center" href="http://localhost/thanhtung3108">
+        <img src="//store.fcbarcelona.com/cdn/shop/t/9/assets/logo-simple-white.svg?v=15706832919691285971675422275" alt="Barça Official Store" class="logobarca me-2" style="height: 50px;">
         <div class="logo-text">
-          <h2 class="mb-0">BLAUGRANA</h2>
-          <h6 class="mb-0">OFFICIAL STORE</h6>
+          <!-- <h2 class="mb-0">BLAUGRANA</h2>
+          <h6 class="mb-0">OFFICIAL STORE</h6> -->
         </div>
       </a>
 
@@ -21,20 +24,17 @@
 
         <!-- Menu giữa -->
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#top">HOME</a></li> 
-          <li class="nav-item"><a class="nav-link" href="kit.html">KITS</a></li>
-          <li class="nav-item"><a class="nav-link" href="xmas.html">CHRISTMAS GUIDE</a></li>
-          <li class="nav-item"><a class="nav-link" href="trainning.html">TRANNING</a></li>
-
+          <li class="nav-item"><a class="nav-link active" href="http://localhost/thanhtung3108">TRANG CHỦ</a></li> 
+          <li class="nav-item"><a class="nav-link" href="http://localhost/thanhtung3108/index.php?action=shop">SHOP</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">COLLECTION</a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PAGE</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item">Calendar</a></li>
-              <li><a class="dropdown-item">Bags</a></li>
-              <li><a class="dropdown-item">Cap</a></li>
-            <li><a class="dropdown-item">Anniversary Gift</a></li>
+              <li><a class="dropdown-item" href="http://localhost/thanhtung3108/index.php?action=top10new">TOP 10 SẢN PHẨM MỚI NHẤT</a></li>
+              <li><a class="dropdown-item" href="http://localhost/thanhtung3108/index.php?action=cart">GIỎ HÀNG</a></li>
+              <li><a class="dropdown-item">THANH TOÁN</a></li>
             </ul>
           </li>
+          <li class="nav-item"><a class="nav-link" href="http://localhost/thanhtung3108/index.php?action=contact">CONTACT</a></li>  
         </ul>
 
         <!-- Icons phải -->
