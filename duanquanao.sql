@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2025 at 09:12 AM
+-- Generation Time: Dec 18, 2025 at 05:08 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -74,7 +74,21 @@ INSERT INTO `chitiethoadon` (`id`, `id_hoadon`, `id_sanpham`, `size`, `soluong`,
 (7, 4, 13, 'S', 1, 2900000),
 (8, 5, 1, 'L', 2, 2800000),
 (9, 5, 25, 'S', 1, 1800000),
-(10, 6, 26, 'XL', 1, 2200000);
+(10, 6, 26, 'XL', 1, 2200000),
+(11, 7, 5, 'M', 1, 3200000),
+(12, 7, 22, 'Free Size', 1, 250000),
+(13, 8, 25, 'S', 1, 1800000),
+(14, 9, 1, 'L', 2, 2800000),
+(15, 10, 19, 'Free Size', 1, 1100000),
+(16, 11, 2, 'XL', 1, 2800000),
+(17, 12, 2, 'M', 1, 2800000),
+(18, 13, 1, 'M', 1, 2800000),
+(19, 14, 4, 'M', 1, 3200000),
+(20, 15, 4, 'M', 2, 3200000),
+(21, 15, 13, 'S', 1, 2900000),
+(22, 16, 1, 'S', 1, 2800000),
+(23, 17, 2, 'S', 2, 2800000),
+(24, 18, 16, 'Size bé hơn', 1, 550000);
 
 -- --------------------------------------------------------
 
@@ -119,7 +133,8 @@ CREATE TABLE `giohang` (
 
 INSERT INTO `giohang` (`id`, `id_user`, `id_sanpham`, `size`, `soluong`) VALUES
 (1, 1, 17, 'Size 5', 1),
-(2, 3, 22, 'Free Size', 5);
+(15, 9, 5, 'XL', 1),
+(16, 7, 17, 'Size 5', 1);
 
 -- --------------------------------------------------------
 
@@ -149,7 +164,19 @@ INSERT INTO `hoadon` (`id`, `id_user`, `tenkhachhang`, `diachi`, `sdt`, `ngaygio
 (3, 3, 'Pedri González', 'Tenerife, Spain', '0933333333', '2025-12-16 08:30:00', 3950000, 1, 2),
 (4, 4, 'Pablo Gavi', 'La Masia, BCN', '0944444444', '2025-12-16 10:15:00', 5800000, 0, 1),
 (5, 5, 'Frenkie De Jong', 'Camp Nou, BCN', '0955555555', '2025-12-17 11:00:00', 7400000, 1, 0),
-(6, 1, 'Nguyễn Văn Culer', 'Cầu Giấy, HN', '0911111111', '2025-12-17 12:45:00', 2200000, 0, 0);
+(6, 1, 'Nguyễn Văn Culer', 'Cầu Giấy, HN', '0911111111', '2025-12-17 12:45:00', 2200000, 0, 0),
+(7, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-18 08:00:00', 3450000, 1, 0),
+(8, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-15 10:30:00', 1800000, 0, 3),
+(9, 8, 'Robert Lewandowski', 'Barcelona City', '0909090909', '2025-12-17 14:20:00', 5600000, 1, 2),
+(10, 9, 'Gavi Paez', 'Sevilla, Spain', '0808080808', '2025-12-18 09:15:00', 1100000, 0, 1),
+(11, 1, 'Administrator', 'Barcelona HQ', '0999999999', '2025-12-18 11:00:00', 2800000, 1, 0),
+(12, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-18 15:38:44', 2800000, 0, 1),
+(13, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-18 16:37:02', 2800000, 1, 0),
+(14, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-18 16:56:54', 3200000, 1, 0),
+(15, 6, 'Wang22', 'Hải Phòng3', '0993333332', '2025-12-18 20:18:57', 9300000, 0, 0),
+(16, 6, 'Wang22', 'Hải Phòng3', '0993333332', '2025-12-18 20:27:30', 2800000, 1, 0),
+(17, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-18 21:48:01', 5600000, 1, 0),
+(18, 7, 'Lamine Yamal', 'La Masia, Barcelona', '0909191919', '2025-12-18 21:51:47', 550000, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -210,7 +237,7 @@ INSERT INTO `sanpham` (`id`, `name`, `price`, `size`, `img`, `mota`, `luotxem`, 
 (9, 'Nike Barca Training Pants', 1500000, 'S, M, L, XL', 'image/694369a977627_VO250917A51522_med.webp', 'Quần dài tập luyện co giãn.', 500, 2, 0),
 (12, 'Barca Crest T-Shirt', 850000, 'S, M, L, XL', 'image/694369ed3e2d2_BLM1TB24P_1.webp', 'Áo phông cotton basic in logo CLB.', 1000, 3, 0),
 (13, 'Nike Tech Fleece Hoodie', 2900000, 'S, M, L, XXL', 'image/69436a22aee5c_HQ1829-411-VPSRH001.webp', 'Áo khoác nỉ cao cấp Tech Fleece.', 800, 3, 0),
-(16, 'Barca Fan Scarf', 550000, 'Free Size', 'image/69436a44f3442_unnamed_5f961503-282b-4c1b-b7e9-416fb39cce60.webp', 'Khăn quàng cổ động viên truyền thống.', 2000, 4, 0),
+(16, 'Barca Fan Scarf', 550000, 'Free Size, Size bé hơn', 'image/69436a44f3442_unnamed_5f961503-282b-4c1b-b7e9-416fb39cce60.webp', 'Khăn quàng cổ động viên truyền thống.', 2000, 4, 0),
 (17, 'Nike Barca Prestige Ball', 750000, 'Size 5', 'image/69436a6ab955a_DX4611-455_1.webp', 'Bóng đá size 5 in logo Barca.', 600, 4, 0),
 (18, 'Barca Snapback Cap', 650000, 'Free Size', 'image/69436a9007423_700x1060-BLM3GBLP-2.webp', 'Mũ lưỡi trai xanh tím than.', 900, 4, 0),
 (19, 'Nike Heritage Backpack', 1100000, 'Free Size', 'image/69436ac837db4_HV2229-455_Y_FA25_EQUIPMENT_PHSFP001.jpg', 'Balo đựng đồ thể thao tiện dụng.', 400, 4, 0),
@@ -240,11 +267,11 @@ CREATE TABLE `sanpham_size` (
 --
 
 INSERT INTO `sanpham_size` (`id`, `id_sanpham`, `size`, `soluong`) VALUES
-(79, 1, 'S', 10),
+(79, 1, 'S', 9),
 (80, 1, 'M', 20),
 (81, 1, 'L', 15),
 (82, 1, 'XL', 5),
-(83, 2, 'S', 8),
+(83, 2, 'S', 6),
 (84, 2, 'M', 12),
 (85, 2, 'L', 10),
 (86, 2, 'XL', 2),
@@ -253,7 +280,7 @@ INSERT INTO `sanpham_size` (`id`, `id_sanpham`, `size`, `soluong`) VALUES
 (89, 3, 'L', 8),
 (90, 3, 'XL', 5),
 (91, 4, 'S', 10),
-(92, 4, 'M', 11),
+(92, 4, 'M', 9),
 (93, 4, 'L', 20),
 (94, 4, 'XL', 30),
 (95, 5, 'S', 15),
@@ -272,12 +299,10 @@ INSERT INTO `sanpham_size` (`id`, `id_sanpham`, `size`, `soluong`) VALUES
 (108, 12, 'M', 30),
 (109, 12, 'L', 20),
 (110, 12, 'XL', 10),
-(111, 13, 'S', 5),
+(111, 13, 'S', 4),
 (112, 13, 'M', 8),
 (113, 13, 'L', 8),
 (114, 13, 'XXL', 35),
-(115, 16, 'Free Size', 50),
-(116, 17, 'Size 5', 30),
 (117, 18, 'Free Size', 40),
 (118, 19, 'Free Size', 20),
 (119, 21, 'Free Size', 10),
@@ -297,7 +322,10 @@ INSERT INTO `sanpham_size` (`id`, `id_sanpham`, `size`, `soluong`) VALUES
 (133, 26, 'M', 12),
 (134, 26, 'L', 10),
 (135, 26, 'XL', 5),
-(136, 27, 'Free Size', 50);
+(136, 27, 'Free Size', 50),
+(137, 17, 'Size 5', 30),
+(138, 16, 'Free Size', 50),
+(139, 16, 'Size bé hơn', 19);
 
 -- --------------------------------------------------------
 
@@ -322,10 +350,10 @@ CREATE TABLE `taikhoan` (
 
 INSERT INTO `taikhoan` (`id`, `name`, `user`, `pass`, `email`, `address`, `tel`, `role`) VALUES
 (1, 'Administrator', 'admin', '123', 'admin@barcastore.com', 'Barcelona HQ', '0999999999', 1),
-(2, 'Nhân Viên Kho', 'staff1', '123', 'kho@barcastore.com', 'Warehouse A', '0888888888', 1),
-(3, 'Quản Lý Cửa Hàng', 'manager', '123', 'hansi@barcastore.com', 'Camp Nou Office', '0777777777', 1),
-(4, 'CSKH Online', 'support', '123', 'hotline@barcastore.com', 'Call Center', '19001000', 1),
-(6, 'Wang22', 'abc22', '123', 'ADCC@gmail.com', 'Hải Phòng3', '0993333332', 0);
+(6, 'Wang22', 'abc22', '123', 'ADCC@gmail.com', 'Hải Phòng3', '0993333332', 0),
+(7, 'Lamine Yamal', 'yamal19', '123', 'lamine@fcb.com', 'La Masia, Barcelona', '0909191919', 0),
+(8, 'Robert Lewandowski', 'lewy9', '123', 'robert@fcb.com', 'Barcelona City', '0909090909', 0),
+(9, 'Gavi Paez', 'gavi6', '123', 'gavi@fcb.com', 'Sevilla, Spain', '0808080808', 0);
 
 --
 -- Indexes for dumped tables
@@ -408,7 +436,7 @@ ALTER TABLE `binhluan`
 -- AUTO_INCREMENT for table `chitiethoadon`
 --
 ALTER TABLE `chitiethoadon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `danhmuc`
@@ -420,13 +448,13 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT for table `giohang`
 --
 ALTER TABLE `giohang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `nguoidung`
@@ -444,13 +472,13 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT for table `sanpham_size`
 --
 ALTER TABLE `sanpham_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
