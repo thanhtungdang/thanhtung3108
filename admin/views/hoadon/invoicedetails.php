@@ -123,37 +123,27 @@ include_once("views/layouts/footer.php");
 ?>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Lấy giá trị trạng thái hiện tại từ PHP
     var trangThaiHienTai = <?= isset($hoaDon['trangthai']) ? $hoaDon['trangthai'] : 0 ?>;
     
-    // 2. Lấy thẻ select
     var menu = document.getElementById('select_trangthai');
 
     if (menu) {
-        // [Xử lý đặc biệt] Nếu đã Hoàn thành (3) hoặc Đã hủy (4) thì khóa cứng luôn menu
         if (trangThaiHienTai == 3 || trangThaiHienTai == 4) {
              menu.disabled = true;
         }
 
-        // 3. Duyệt qua từng option
         for (var i = 0; i < menu.options.length; i++) {
             var optionValue = parseInt(menu.options[i].value);
 
-            // LOGIC MỚI:
-            // Chỉ mở khóa (enable) nếu option đó là:
-            // 1. Chính trạng thái hiện tại (để giữ nguyên)
-            // 2. HOẶC là bước kế tiếp liền kề (Hiện tại + 1)
             var isCurrent = (optionValue === trangThaiHienTai);
             var isNextStep = (optionValue === trangThaiHienTai + 1);
 
             if (isCurrent || isNextStep) {
-                // Mở khóa, màu sắc bình thường
                 menu.options[i].disabled = false;
                 menu.options[i].style.color = ""; 
             } else {
-                // Khóa tất cả các trường hợp còn lại (Quay lui, Nhảy cóc, Hủy ngang...)
                 menu.options[i].disabled = true;
-                menu.options[i].style.color = "#d1d1d1"; // Làm mờ
+                menu.options[i].style.color = "#d1d1d1"; 
             }
         }
     }

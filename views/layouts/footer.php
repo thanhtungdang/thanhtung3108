@@ -1,3 +1,6 @@
+ <?php 
+    include_once("views/assets/CSS/all.php");
+    ?>
 <footer>
     <div class="container-fluid">
         <div class="row">

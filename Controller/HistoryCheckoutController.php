@@ -10,23 +10,17 @@ class HistoryCheckoutController {
     }
 
     public function search() {
-        $phoneNumber = "";
-
-        if (isset($_GET['phoneNumber'])) {
-            $phoneNumber = trim($_GET['phoneNumber']);
-        }
-
         $listHistory = [];
 
-        if ($phoneNumber != "") {
-            $listHistory = $this->history->getByPhone($phoneNumber);
+        if (isset($_SESSION['user'])) {
+            $id_user = $_SESSION['user']['id'];
+            $listHistory = $this->history->getByUserId($id_user);
         }
 
         include_once("views/historyCheckout.php");
     }
 
     public function detail() {
-
         if (!isset($_GET['id'])) {
             echo "Thiếu ID hóa đơn";
             exit;

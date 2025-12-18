@@ -69,7 +69,7 @@
         <img src="views/assets/images/anhkitto.png" class="img-fluid w-100" alt="Banner">
         <div class="thumbbanner position-absolute top-50 start-50 translate-middle">
             <div class="kit_title">
-                <strong>KITS</strong>
+                <strong>SHOP</strong>
             </div>
             <a href="index.php?action=shop">
                 <div class="banner_border_button">

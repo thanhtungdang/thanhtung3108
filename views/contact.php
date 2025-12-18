@@ -11,11 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <?php 
-    // Giữ nguyên các file CSS gốc của bạn
     include_once("views/assets/CSS/all.php");
     ?>
 
-    <style>
+<style>
         :root {
             --fcb-navy: #181733;
             --fcb-dark: #0a091e;
@@ -194,7 +193,7 @@
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(165, 0, 68, 0.2);
         }
-    </style>
+</style>
 </head>
 <body>
 
@@ -253,9 +252,13 @@
     <div class="container">
         <div class="map">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.4616652427847!2d106.6806371!3d20.8433436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7af39e3f173b%3A0xd641f238805f778c!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1700000000000"
-                width="100%" height="450" style="border:0;" 
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                loading="lazy" 
+                allowfullscreen 
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=20.8389,106.6946&hl=vi&z=16&output=embed">
             </iframe>
         </div>
         <div class="contact-form-section">

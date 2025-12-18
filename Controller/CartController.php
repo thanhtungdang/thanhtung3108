@@ -1,100 +1,81 @@
 <?php
 include_once("Model/Cart.php");
-class CartController
-{
+
+class CartController {
     private $cart;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->cart = new Cart();
     }
-    public function add()
-    {
-        if (isset($_GET['idsp'])) {
-            $idSp = $_GET['idsp'];
-            if (!isset($_SESSION['cart'])) {
-                $_SESSION['cart'] = [];
-            }
-            $tonTaiSP = false;
-            foreach ($_SESSION['cart'] as $key => $item) {
-                if ($item['idsp'] == $idSp) {
-                    $_SESSION['cart'][$key]['soLuong']++;
-                    $tonTaiSP = true;
-                    break;
-                }
-            }
-            if ($tonTaiSP == false) {
-                $_SESSION['cart'][] =
-                    ["idsp" => $idSp, "soLuong" => 1];
-            }
-        }
 
-        header("Location:index.php?action=cart");
-    }
-    public function cart()
-    {
-        $tongTien = 0;
-        if (isset($_SESSION['cart'])) {
-
-            foreach ($_SESSION['cart'] as $key => $item) {
-                $sanPhamDetail = $this->cart->getAllProductById($item['idsp']);
-                $_SESSION['cart'][$key]['name'] = $sanPhamDetail['name'];
-                $_SESSION['cart'][$key]['price'] = $sanPhamDetail['price'];
-                $_SESSION['cart'][$key]['img'] = $sanPhamDetail['img'];
-                $tongTien += $_SESSION['cart'][$key]['soLuong'] * $sanPhamDetail['price'];
-            }
-        } else {
-            $_SESSION['cart'] = [];
-        }
-        include_once("views/cart.php");
-    }
-    public function delete()
-    {
-        if (isset($_GET['idsp'])) {
-            $id = $_GET['idsp'];
-
-            // Tìm phần tử có idsp trùng nhau
-            foreach ($_SESSION['cart'] as $key => $item) {
-                if ($item['idsp'] == $id) {
-                    unset($_SESSION['cart'][$key]);
-                    break;
-                }
-            }
-
-            // Sắp xếp lại key cho đều 0,1,2,3...
-            $_SESSION['cart'] = array_values($_SESSION['cart']);
-
-            header("Location: index.php?action=cart");
+    // Hiển thị giỏ hàng
+    public function cart() {
+        if (!isset($_SESSION['user'])) {
+            header("Location: index.php?action=login");
             exit();
         }
+
+        $idUser = $_SESSION['user']['id'];
+        $listCart = $this->cart->getCartByUser($idUser);
+
+        $tongTien = 0;
+        foreach ($listCart as $item) {
+            $tongTien += $item['price'] * $item['soluong'];
+        }
+
+        include_once("views/cart.php");
     }
 
-    public function update()
-    {
-        if (isset($_GET['idsp']) && isset($_GET['type'])) {
-            $idSp = $_GET['idsp'];
-            $type = $_GET['type']; // 'increase' hoặc 'decrease'
+    // Thêm vào giỏ
+    public function add() {
+        if (!isset($_SESSION['user'])) {
+            echo "<script>alert('Bạn phải đăng nhập');location.href='index.php?action=login'</script>";
+            exit;
+        }
 
-            if (isset($_SESSION['cart'])) {
-                foreach ($_SESSION['cart'] as $key => $item) {
-                    if ($item['idsp'] == $idSp) {
-                        if ($type == 'increase') {
-                            $_SESSION['cart'][$key]['soLuong']++;
-                        } elseif ($type == 'decrease') {
-                            if ($_SESSION['cart'][$key]['soLuong'] > 1) {
-                                $_SESSION['cart'][$key]['soLuong']--;
-                            } else {
-                                // Nếu giảm xuống 0 thì xóa luôn sản phẩm (tùy chọn)
-                                unset($_SESSION['cart'][$key]);
-                            }
-                        }
-                        break;
-                    }
-                }
-                $_SESSION['cart'] = array_values($_SESSION['cart']);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->cart->updateOrInsertCart(
+                $_SESSION['user']['id'],
+                $_POST['idsp'],
+                $_POST['soluong'],
+                $_POST['size']
+            );
+            header("Location: index.php?action=cart");
+        }
+    }
+
+    // Update số lượng
+    public function update() {
+        if (
+            isset($_SESSION['user']) &&
+            isset($_GET['idsp']) &&
+            isset($_GET['size']) &&
+            isset($_GET['type'])
+        ) {
+            $res = $this->cart->updateQuantity(
+                $_SESSION['user']['id'],
+                $_GET['idsp'],
+                $_GET['size'],
+                $_GET['type']
+            );
+
+            if ($res == "over_stock") {
+                echo "<script>alert('Không đủ hàng trong kho');location.href='index.php?action=cart'</script>";
+                exit;
             }
         }
         header("Location: index.php?action=cart");
-        exit();
+    }
+
+    // Xóa sản phẩm
+    public function delete() {
+        if (isset($_SESSION['user'], $_GET['idsp'], $_GET['size'])) {
+            $this->cart->deleteCartItem(
+                $_SESSION['user']['id'],
+                $_GET['idsp'],
+                $_GET['size']
+            );
+        }
+        header("Location: index.php?action=cart");
     }
 }

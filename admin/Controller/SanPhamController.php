@@ -85,7 +85,7 @@ class SanPhamController
             $moTa = $_POST['mota'];
             $idDanhMuc = $_POST['danhmuc'];
             
-            // Xử lý ảnh
+            // xử lý ảnh
             $imageName = null;
             if (isset($_FILES['anh']) && $_FILES['anh']['name'] != '') {
                 $linkAnhCu = $this->sanPham->getOne($id)['img'];
@@ -95,11 +95,10 @@ class SanPhamController
                     unlink($linkAnhCu);
                 }
             }
-            // Update thông tin chung
+            // update thông tin chung
             $this->sanPham->update($id, $ten, $gia, $moTa, $idDanhMuc, $imageName);
 
 
-            // --- XỬ LÝ SIZE (GOM BIẾN LẺ THÀNH MẢNG) ---
             $mangTenSize = [];
             $mangSoLuong = [];
 

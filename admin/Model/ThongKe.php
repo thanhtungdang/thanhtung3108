@@ -2,7 +2,6 @@
 include_once("pdo.php");
 class ThongKe
 {
-    // 10 sản phẩm mới
     public function getAllNew()
     {
         $sql = "SELECT sp.*, dm.name AS tendanhmuc
@@ -13,7 +12,6 @@ class ThongKe
                 LIMIT 10";
         return pdo_query($sql);
     }
-    // 10 sản phẩm bán chạy
     public function getAllBanChay()
     {
         $sql = "SELECT sp.*, dm.name AS tendanhmuc,
@@ -28,7 +26,6 @@ class ThongKe
                 LIMIT 10";
         return pdo_query($sql);
     }
-    // Tổng số sản phẩm đã bán
     public function soLuongBan()
     {
         $sql = "SELECT SUM(cthd.soluong) AS tong_soluong
@@ -37,7 +34,6 @@ class ThongKe
                 WHERE hd.trangthai != 4";
         return pdo_query_one($sql);
     }
-    // Tổng doanh thu
     public function doanhThu()
     {
         return pdo_query_one(
@@ -46,7 +42,6 @@ class ThongKe
              WHERE trangthai != 4"
         );
     }
-    // Tổng đơn hàng
     public function tongDonHang()
     {
         return pdo_query_one(
@@ -55,7 +50,6 @@ class ThongKe
              WHERE trangthai != 4"
         );
     }
-    // Doanh thu theo ngày (biểu đồ)
     public function loadSodo($from, $to)
     {
         $sql = "SELECT DATE(ngaygiodat) AS ngay,

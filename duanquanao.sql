@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2025 at 04:21 PM
+-- Generation Time: Dec 18, 2025 at 09:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -201,26 +201,26 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`id`, `name`, `price`, `size`, `img`, `mota`, `luotxem`, `iddm`, `deleted`) VALUES
-(1, 'FC Barcelona Home Kit 24/25', 2800000, 'S, M, L, XL', 'home_kit_2425.jpg', 'Áo đấu sân nhà kỷ niệm 125 năm thành lập CLB.', 1500, 1, 0),
-(2, 'FC Barcelona Away Kit 24/25', 2800000, 'S, M, L, XL', 'away_kit_2425.jpg', 'Áo đấu sân khách màu đen sang trọng.', 1200, 1, 0),
-(3, 'FC Barcelona Third Kit 24/25', 2800000, 'S, M, L, XL', 'third_kit_2425.jpg', 'Áo đấu thứ 3 màu xanh dạ quang.', 900, 1, 0),
-(4, 'Lewandowski 9 - Home Shirt', 3200000, 'S, M, L, XL', 'lewy_home.jpg', 'Áo đấu sân nhà in tên Lewandowski số 9.', 800, 1, 0),
-(5, 'Lamine Yamal 19 - Home Shirt', 3200000, 'S, M, L, XL', 'yamal_home.jpg', 'Áo đấu thần đồng Lamine Yamal.', 2000, 1, 0),
-(8, 'Nike Barca Strike Drill Top', 1800000, 'S, M, L, XL', 'training_top.jpg', 'Áo dài tay tập luyện công nghệ Dri-FIT.', 600, 2, 0),
-(9, 'Nike Barca Training Pants', 1500000, 'S, M, L, XL', 'training_pants.jpg', 'Quần dài tập luyện co giãn.', 500, 2, 0),
-(12, 'Barca Crest T-Shirt', 850000, 'S, M, L, XL', 'tshirt_crest.jpg', 'Áo phông cotton basic in logo CLB.', 1000, 3, 0),
-(13, 'Nike Tech Fleece Hoodie', 2900000, 'S, M, L, XL', 'hoodie_tech.jpg', 'Áo khoác nỉ cao cấp Tech Fleece.', 800, 3, 0),
-(16, 'Barca Fan Scarf', 550000, 'Free Size', 'scarf_classic.jpg', 'Khăn quàng cổ động viên truyền thống.', 2000, 4, 0),
-(17, 'Nike Barca Prestige Ball', 750000, 'Size 5', 'ball_prestige.jpg', 'Bóng đá size 5 in logo Barca.', 600, 4, 0),
-(18, 'Barca Snapback Cap', 650000, 'Free Size', 'cap_navy.jpg', 'Mũ lưỡi trai xanh tím than.', 900, 4, 0),
-(19, 'Nike Heritage Backpack', 1100000, 'Free Size', 'backpack.jpg', 'Balo đựng đồ thể thao tiện dụng.', 400, 4, 0),
-(21, 'Camp Nou 3D Model', 1200000, 'Free Size', 'campnou_model.jpg', 'Mô hình sân vận động Camp Nou lắp ghép 3D.', 150, 5, 0),
-(22, 'Barca Keyring Metal', 250000, 'Free Size', 'keyring.jpg', 'Móc khóa kim loại logo CLB.', 1200, 5, 0),
-(23, 'Ter Stegen 1 - GK Kit', 2900000, 'S, M, L, XL', 'gk_terstegen.jpg', 'Áo đấu thủ môn màu xanh lá cây.', 450, 1, 0),
-(24, 'Barca Retro 2011 Final Wembley', 3500000, 'S, M, L, XL', 'retro_2011.jpg', 'Áo đấu phiên bản chung kết C1 2011.', 3000, 5, 0),
-(25, 'Barca Kids Home Kit', 1800000, 'XS, S, M', 'kids_home.jpg', 'Bộ quần áo thi đấu cho trẻ em.', 700, 1, 0),
-(26, 'Nike Windrunner Jacket', 2200000, 'S, M, L, XL', 'windrunner.jpg', 'Áo khoác gió thể thao chống nước.', 1100, 2, 0),
-(27, 'Barca Metal Water Bottle', 450000, 'Free Size', 'bottle.jpg', 'Bình nước giữ nhiệt in logo.', 300, 4, 0);
+(1, 'FC Barcelona Home Kit 24/25', 2800000, 'S, M, L, XL', 'image/694368ae6d486_HJ4590-456_415227879_D_A_1X1_e3028dab-beb3-4a47-a7bc-0783a5f75462.avif', 'Áo đấu sân nhà kỷ niệm 125 năm thành lập CLB.', 1500, 1, 0),
+(2, 'FC Barcelona Away Kit 24/25', 2800000, 'S, M, L, XL', 'image/694368ce6473a_HJ4603-784_431735711_D_A_1X1_4ebdb94b-be58-4c4a-bceb-d3900f4fdc4f.webp', 'Áo đấu sân khách màu đen sang trọng.', 1200, 1, 0),
+(3, 'FC Barcelona Third Kit 24/25', 2800000, 'S, M, L, XL', 'image/694368f077c45__GP20998.webp', 'Áo đấu thứ 3 màu xanh dạ quang.', 900, 1, 0),
+(4, 'Lewandowski 9 - Home Shirt', 3200000, 'S, M, L, XL', 'image/694369153c869_81oLMzXR9qL._AC_UY1000_.jpg', 'Áo đấu sân nhà in tên Lewandowski số 9.', 800, 1, 0),
+(5, 'Lamine Yamal 19 - Home Shirt', 3200000, 'S, M, L, XL', 'image/6943693d50da4_lamineyamal-ucl_7c9afdfb-cfe5-43ff-bf30-b74e4e5b837b.webp', 'Áo đấu thần đồng Lamine Yamal.', 2000, 1, 0),
+(8, 'Nike Barca Strike Drill Top', 1800000, 'S, M, L, XL', 'image/69436979ddf2a_FCBarcelonaStrikeMen_sNikeDri-FITSoccerDrillTopFN9834-717_2000x.webp', 'Áo dài tay tập luyện công nghệ Dri-FIT.', 600, 2, 0),
+(9, 'Nike Barca Training Pants', 1500000, 'S, M, L, XL', 'image/694369a977627_VO250917A51522_med.webp', 'Quần dài tập luyện co giãn.', 500, 2, 0),
+(12, 'Barca Crest T-Shirt', 850000, 'S, M, L, XL', 'image/694369ed3e2d2_BLM1TB24P_1.webp', 'Áo phông cotton basic in logo CLB.', 1000, 3, 0),
+(13, 'Nike Tech Fleece Hoodie', 2900000, 'S, M, L, XXL', 'image/69436a22aee5c_HQ1829-411-VPSRH001.webp', 'Áo khoác nỉ cao cấp Tech Fleece.', 800, 3, 0),
+(16, 'Barca Fan Scarf', 550000, 'Free Size', 'image/69436a44f3442_unnamed_5f961503-282b-4c1b-b7e9-416fb39cce60.webp', 'Khăn quàng cổ động viên truyền thống.', 2000, 4, 0),
+(17, 'Nike Barca Prestige Ball', 750000, 'Size 5', 'image/69436a6ab955a_DX4611-455_1.webp', 'Bóng đá size 5 in logo Barca.', 600, 4, 0),
+(18, 'Barca Snapback Cap', 650000, 'Free Size', 'image/69436a9007423_700x1060-BLM3GBLP-2.webp', 'Mũ lưỡi trai xanh tím than.', 900, 4, 0),
+(19, 'Nike Heritage Backpack', 1100000, 'Free Size', 'image/69436ac837db4_HV2229-455_Y_FA25_EQUIPMENT_PHSFP001.jpg', 'Balo đựng đồ thể thao tiện dụng.', 400, 4, 0),
+(21, 'Camp Nou 3D Model', 1200000, 'Free Size', 'image/69436af467897_resize-6b-1.webp', 'Mô hình sân vận động Camp Nou lắp ghép 3D.', 150, 5, 0),
+(22, 'Barca Keyring Metal', 250000, 'Free Size', 'image/69436b1a0acb2_unnamed_ed655574-f1af-4a4a-bd45-dad32d9a6610.webp', 'Móc khóa kim loại logo CLB.', 1200, 5, 0),
+(23, 'Ter Stegen 1 - GK Kit', 2900000, 'S, M, L, XL', 'image/69436b3da5658_terstegen-ucl.webp', 'Áo đấu thủ môn màu xanh lá cây.', 450, 1, 0),
+(24, 'Barca Retro 2011 Final Wembley', 3500000, 'S, M, L, XL', 'image/69436be2c9c79_Barcelona-2011-Champions-League-Final-Shirt-Retro.webp', 'Áo đấu phiên bản chung kết C1 2011.', 3000, 5, 0),
+(25, 'Barca Kids Home Kit', 1800000, 'XS, S, M', 'image/69436bffe005d_BARC_A_KIDS_C1_LK_07_2559.webp', 'Bộ quần áo thi đấu cho trẻ em.', 700, 1, 0),
+(26, 'Nike Windrunner Jacket', 2200000, 'S, M, L, XL', 'image/69436c46d058f_HM3120-594_1.webp', 'Áo khoác gió thể thao chống nước.', 1100, 2, 0),
+(27, 'Barca Metal Water Bottle', 450000, 'Free Size', 'image/69436c6a622d6_75640_1.webp', 'Bình nước giữ nhiệt in logo.', 300, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -240,64 +240,64 @@ CREATE TABLE `sanpham_size` (
 --
 
 INSERT INTO `sanpham_size` (`id`, `id_sanpham`, `size`, `soluong`) VALUES
-(1, 1, 'S', 10),
-(2, 1, 'M', 20),
-(3, 1, 'L', 15),
-(4, 1, 'XL', 5),
-(5, 2, 'S', 8),
-(6, 2, 'M', 12),
-(7, 2, 'L', 10),
-(8, 2, 'XL', 2),
-(9, 3, 'S', 5),
-(10, 3, 'M', 10),
-(11, 3, 'L', 8),
-(12, 3, 'XL', 5),
-(17, 5, 'S', 15),
-(18, 5, 'M', 25),
-(19, 5, 'L', 20),
-(20, 5, 'XL', 10),
-(21, 8, 'S', 5),
-(22, 8, 'M', 10),
-(23, 8, 'L', 10),
-(24, 8, 'XL', 5),
-(25, 9, 'S', 5),
-(26, 9, 'M', 10),
-(27, 9, 'L', 10),
-(28, 9, 'XL', 5),
-(29, 12, 'S', 20),
-(30, 12, 'M', 30),
-(31, 12, 'L', 20),
-(32, 12, 'XL', 10),
-(33, 13, 'S', 5),
-(34, 13, 'M', 8),
-(35, 13, 'L', 8),
-(36, 13, 'XL', 3),
-(37, 16, 'Free Size', 50),
-(38, 17, 'Size 5', 30),
-(39, 18, 'Free Size', 40),
-(40, 19, 'Free Size', 20),
-(41, 21, 'Free Size', 10),
-(42, 22, 'Free Size', 100),
-(43, 23, 'S', 5),
-(44, 23, 'M', 5),
-(45, 23, 'L', 5),
-(46, 23, 'XL', 2),
-(47, 24, 'S', 3),
-(48, 24, 'M', 3),
-(49, 24, 'L', 2),
-(50, 24, 'XL', 1),
-(51, 25, 'XS', 10),
-(52, 25, 'S', 10),
-(53, 25, 'M', 10),
-(54, 26, 'S', 8),
-(55, 26, 'M', 12),
-(56, 26, 'L', 10),
-(57, 26, 'XL', 5),
-(58, 27, 'Free Size', 50),
-(60, 4, 'S', 10),
-(61, 4, 'M', 11),
-(62, 4, 'L', 20),
-(63, 4, 'XL', 30);
+(79, 1, 'S', 10),
+(80, 1, 'M', 20),
+(81, 1, 'L', 15),
+(82, 1, 'XL', 5),
+(83, 2, 'S', 8),
+(84, 2, 'M', 12),
+(85, 2, 'L', 10),
+(86, 2, 'XL', 2),
+(87, 3, 'S', 5),
+(88, 3, 'M', 10),
+(89, 3, 'L', 8),
+(90, 3, 'XL', 5),
+(91, 4, 'S', 10),
+(92, 4, 'M', 11),
+(93, 4, 'L', 20),
+(94, 4, 'XL', 30),
+(95, 5, 'S', 15),
+(96, 5, 'M', 25),
+(97, 5, 'L', 20),
+(98, 5, 'XL', 10),
+(99, 8, 'S', 5),
+(100, 8, 'M', 10),
+(101, 8, 'L', 10),
+(102, 8, 'XL', 5),
+(103, 9, 'S', 5),
+(104, 9, 'M', 10),
+(105, 9, 'L', 10),
+(106, 9, 'XL', 5),
+(107, 12, 'S', 20),
+(108, 12, 'M', 30),
+(109, 12, 'L', 20),
+(110, 12, 'XL', 10),
+(111, 13, 'S', 5),
+(112, 13, 'M', 8),
+(113, 13, 'L', 8),
+(114, 13, 'XXL', 35),
+(115, 16, 'Free Size', 50),
+(116, 17, 'Size 5', 30),
+(117, 18, 'Free Size', 40),
+(118, 19, 'Free Size', 20),
+(119, 21, 'Free Size', 10),
+(120, 22, 'Free Size', 100),
+(121, 23, 'S', 5),
+(122, 23, 'M', 5),
+(123, 23, 'L', 5),
+(124, 23, 'XL', 2),
+(125, 24, 'S', 3),
+(126, 24, 'M', 3),
+(127, 24, 'L', 2),
+(128, 24, 'XL', 1),
+(129, 25, 'XS', 10),
+(130, 25, 'S', 10),
+(131, 25, 'M', 10),
+(132, 26, 'S', 8),
+(133, 26, 'M', 12),
+(134, 26, 'L', 10),
+(135, 26, 'XL', 5),
+(136, 27, 'Free Size', 50);
 
 -- --------------------------------------------------------
 
@@ -324,7 +324,8 @@ INSERT INTO `taikhoan` (`id`, `name`, `user`, `pass`, `email`, `address`, `tel`,
 (1, 'Administrator', 'admin', '123', 'admin@barcastore.com', 'Barcelona HQ', '0999999999', 1),
 (2, 'Nhân Viên Kho', 'staff1', '123', 'kho@barcastore.com', 'Warehouse A', '0888888888', 1),
 (3, 'Quản Lý Cửa Hàng', 'manager', '123', 'hansi@barcastore.com', 'Camp Nou Office', '0777777777', 1),
-(4, 'CSKH Online', 'support', '123', 'hotline@barcastore.com', 'Call Center', '19001000', 1);
+(4, 'CSKH Online', 'support', '123', 'hotline@barcastore.com', 'Call Center', '19001000', 1),
+(6, 'Wang22', 'abc22', '123', 'ADCC@gmail.com', 'Hải Phòng3', '0993333332', 0);
 
 --
 -- Indexes for dumped tables
@@ -443,13 +444,13 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT for table `sanpham_size`
 --
 ALTER TABLE `sanpham_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -474,13 +475,7 @@ ALTER TABLE `chitiethoadon`
 --
 ALTER TABLE `giohang`
   ADD CONSTRAINT `fk_giohang_sanpham` FOREIGN KEY (`id_sanpham`) REFERENCES `sanpham` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `fk_giohang_user` FOREIGN KEY (`id_user`) REFERENCES `nguoidung` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `hoadon`
---
-ALTER TABLE `hoadon`
-  ADD CONSTRAINT `fk_hoadon_user` FOREIGN KEY (`id_user`) REFERENCES `nguoidung` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `fk_giohang_user` FOREIGN KEY (`id_user`) REFERENCES `taikhoan` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `sanpham`

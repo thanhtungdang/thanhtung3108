@@ -195,10 +195,10 @@ include_once("views/assets/CSS/all.php");
         transform: scale(1.2);
     }
 </style>
-
 <section class="shoping-cart spad">
     <div class="container">
         <h2 class="cart-title">Giỏ hàng của bạn</h2>
+
         <div class="row">
             <div class="col-lg-8">
                 <div class="shoping__cart__table">
@@ -213,75 +213,62 @@ include_once("views/assets/CSS/all.php");
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if (!empty($_SESSION['cart'])): ?>
-                                <?php foreach ($_SESSION['cart'] as $item): ?>
-                                    <tr>
-                                        <td style="width: 100px;">
-                                            <div class="cart-img-wrap">
-                                                <img src="admin/<?= $item['img']; ?>" alt="">
-                                            </div>
-                                        </td>
-                                        <td class="text-start">
-                                            <h6 class="fw-bold mb-1"><?= $item['name'] ?></h6>
-                                            <small class="text-muted">Mã SP: #<?= $item['idsp'] ?></small>
-                                        </td>
-                                        <td class="price-main">
-                                            <?= number_format($item['price']); ?>đ
-                                        </td>
-                                        <td>
-                                            <div class="quantity-controls">
-                                                <a href="index.php?action=updatecart&idsp=<?= $item['idsp']; ?>&type=decrease" class="qty-btn">-</a>
-                                                <input type="text" class="qty-input" value="<?= $item['soLuong']; ?>" readonly>
-                                                <a href="index.php?action=updatecart&idsp=<?= $item['idsp']; ?>&type=increase" class="qty-btn">+</a>
-                                            </div>
-                                        </td>
-                                        <td class="price-total">
-                                            <?= number_format($item['price'] * $item['soLuong']) ?>đ
-                                        </td>
-                                        <td>
-                                            <a href="index.php?action=deletecart&idsp=<?= $item['idsp']; ?>" 
-                                               onclick="return confirm('Bạn có muốn xoá sản phẩm này?')" 
-                                               class="btn-remove">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            <?php else: ?>
+                        <?php if (!empty($listCart)): ?>
+                            <?php foreach ($listCart as $item): ?>
                                 <tr>
-                                    <td colspan="6" class="text-center py-5">
-                                        <p class="mb-4">Giỏ hàng đang trống</p>
-                                        <a href="index.php" class="btn btn-navy text-white" style="background: var(--fcb-navy)">Mua sắm ngay</a>
+                                    <td style="width:100px">
+                                        <div class="cart-img-wrap">
+                                            <img src="admin/<?= $item['img']; ?>">
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <h6><?= $item['name'] ?></h6>
+                                        <small>Size: <?= $item['size'] ?></small>
+                                    </td>
+
+                                    <td><?= number_format($item['price']) ?>đ</td>
+
+                                    <td>
+                                        <div class="quantity-controls">
+                                            <a class="qty-btn"
+                                               href="index.php?action=updatecart&idsp=<?= $item['id_sanpham']; ?>&size=<?= $item['size']; ?>&type=decrease">-</a>
+
+                                            <input class="qty-input" readonly value="<?= $item['soluong']; ?>">
+
+                                            <a class="qty-btn"
+                                               href="index.php?action=updatecart&idsp=<?= $item['id_sanpham']; ?>&size=<?= $item['size']; ?>&type=increase">+</a>
+                                        </div>
+                                    </td>
+
+                                    <td><?= number_format($item['price'] * $item['soluong']) ?>đ</td>
+
+                                    <td>
+                                        <a class="btn-remove"
+                                           onclick="return confirm('Xóa sản phẩm này?')"
+                                           href="index.php?action=deletecart&idsp=<?= $item['id_sanpham']; ?>&size=<?= $item['size']; ?>">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </a>
                                     </td>
                                 </tr>
-                            <?php endif; ?>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="6" class="text-center">Giỏ hàng trống</td>
+                            </tr>
+                        <?php endif; ?>
                         </tbody>
                     </table>
-                </div>
-
-                <div class="mt-4">
-                    <a href="index.php" class="text-decoration-none text-dark fw-bold">
-                        <i class="fa fa-long-arrow-left me-2"></i> Tiếp tục mua sắm
-                    </a>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="shoping__checkout">
-                    <h5>Tóm tắt đơn hàng</h5>
-                    <ul class="checkout__total p-0">
-                        <li>Tạm tính <span><?= number_format($tongTien) ?>đ</span></li>
-                        <li>Giao hàng <span style="font-size: 14px; color: #fff;">Miễn phí</span></li>
-                        <hr style="border-color: rgba(255,255,255,0.1)">
-                        <li>Tổng cộng <span><?= number_format($tongTien) ?>đ</span></li>
+                    <h5>Tóm tắt</h5>
+                    <ul class="checkout__total">
+                        <li>Tổng <span><?= number_format($tongTien) ?>đ</span></li>
                     </ul>
                     <a href="index.php?action=showcheckout" class="primary-btn">Thanh toán</a>
-                    
-                    <div class="mt-4">
-                        <small style="font-size: 11px; opacity: 0.7;">
-                            <i class="fa fa-shield-alt me-1"></i> Thanh toán an toàn & Bảo mật thông tin.
-                        </small>
-                    </div>
                 </div>
             </div>
         </div>

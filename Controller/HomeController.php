@@ -12,7 +12,6 @@ class HomeController {
     public function home() {
         $products = $this->homeModel->getAll();
         $productsDanhMuc = $this->homeModel->getAllDanhMuc();
-        // Mặc định ở trang chủ là sản phẩm mới nhất
         $currentCategoryName = "Sản phẩm mới nhất";
         
         include_once("views/home.php");
@@ -29,6 +28,7 @@ class HomeController {
     public function sanpham() {
         $id = isset($_GET['id']) ? $_GET['id'] : 0;
         $product1 = $this->homeModel->getOneSp($id);
+        $dsSize = $this->homeModel->getSizesBySpId($id); 
         include_once("views/sanpham.php");  
     }
 
