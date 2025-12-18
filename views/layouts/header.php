@@ -51,7 +51,6 @@ include_once("views/assets/CSS/all.php");
             <ul class="dropdown-menu dropdown-menu-end shadow">
               <?php if(!isset($_SESSION['user'])): ?>
                 <li><a class="dropdown-item" href="index.php?action=login"><i class="fa-solid fa-right-to-bracket me-2"></i>Đăng nhập</a></li>
-                <li><a class="dropdown-item" href="index.php?action=login"><i class="fa-solid fa-user-plus me-2"></i>Đăng ký</a></li>
               <?php else: ?>
                 <li><a class="dropdown-item" href="index.php?action=profile"><i class="fa-solid fa-circle-user me-2"></i>Thông tin tài khoản</a></li>
                 <li><a class="dropdown-item" href="index.php?action=HistoryCheckout"><i class="fa-solid fa-clock-rotate-left me-2"></i>Lịch sử mua hàng</a></li>

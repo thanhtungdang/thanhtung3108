@@ -124,7 +124,7 @@
 
                             <div id="khung_ma_qr" class="text-center w-100 mb-4" style="display: none;">
                                 <p class="small text-muted mb-2">Quét mã để thanh toán nhanh:</p>
-                                <img src="https://img.vietqr.io/image/MB-20072006190326-compact2.png?amount=<?= $tongTien ?>&addInfo=TT%20Barca%20<?= $_SESSION['user']['user'] ?>" 
+                                <img src="https://img.vietqr.io/image/MB-00000310800000-compact2.png?amount=<?= $tongTien ?>&addInfo=TT%20Barca%20<?= $_SESSION['user']['user'] ?>" 
                                      class="img-fluid" style="max-width: 200px;">
                             </div>
 

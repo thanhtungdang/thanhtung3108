@@ -30,7 +30,6 @@ class HistoryCheckoutController {
 
         $hoaDon = $this->history->getDetail($id);
         $listChiTiet = $this->history->getProducts($id);
-
         include_once("views/checkDetailedInvoiceHistory.php");
     }
 }

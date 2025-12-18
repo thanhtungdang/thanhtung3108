@@ -318,55 +318,68 @@
                 <?= isset($currentCategoryName) ? $currentCategoryName : "Sản phẩm mới nhất" ?>
             </h2>
             
-            <div class="row g-4">
-                <?php if (!empty($products)): ?>
-                    <?php foreach ($products as $product): ?>
-                        <div class="col-6 col-md-4">
-                            <div class="product-card shadow-sm">
-                                <div class="image-container">
-                                    <img src="admin/<?= !empty($product['img']) ? $product['img'] : 'default.png'; ?>" 
-                                         alt="<?= $product['name']; ?>" 
-                                         class="product-image">
-                                    
-                                    <div class="product-actions">
-                                        <a href="index.php?action=sanpham&&id=<?= $product['id'] ?>" class="btn-action">
-                                            <i class="fa fa-eye"></i>
-                                        </a>
-                                        <a href="index.php?action=addtocart&idsp=<?= $product['id']; ?>" class="btn-action">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
+        <div class="row g-4">
+            <?php if (!empty($products)): ?>
+                <?php foreach ($products as $product): ?>
+                    <div class="col-6 col-md-4">
+                        <div class="card bg-dark text-light h-100 shadow-sm">
+                            <div class="position-relative">
+                                <img src="admin/<?= !empty($product['img']) ? $product['img'] : 'default.png'; ?>" 
+                                    class="card-img-top" 
+                                    alt="<?= $product['name']; ?>" 
+                                    style="object-fit: contain; padding: 15px; background-color: #fff; height: 250px;">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x mb-2 d-flex gap-2 opacity-0 card-actions">
+                                    <a href="index.php?action=sanpham&&id=<?= $product['id'] ?>" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="index.php?action=addtocart&idsp=<?= $product['id']; ?>" class="btn btn-success btn-sm">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </a>
                                 </div>
-
-                                <div class="product-info">
-                                    <div>
-                                        <span class="category-label">FC Barcelona</span>
-                                        <a href="index.php?action=sanpham&&id=<?= $product['id'] ?>" class="product-name">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <span class="text-warning fw-bold small">FC Barcelona</span>
+                                    <h6 class="card-title mt-1">
+                                        <a href="index.php?action=sanpham&&id=<?= $product['id'] ?>" class="text-decoration-none text-light">
                                             <?= $product['name']; ?>
                                         </a>
+                                    </h6>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="fw-bold text-warning">
+                                        <?= number_format($product['price'], 0, ',', '.') ?> đ
                                     </div>
-                                    <div>
-                                        <div class="product-price">
-                                            <?= number_format($product['price'], 0, ',', '.') ?> đ
-                                        </div>
-                                        <a href="index.php?action=addtocart&idsp=<?= $product['id']; ?>" class="btn btn-buy-now">
-                                            Mua ngay
-                                        </a>
-                                    </div>
+                                    <a href="index.php?action=sanpham&&id=<?= $product['id']; ?>" class="btn btn-outline-warning btn-sm mt-2 w-100">
+                                        Mua ngay
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <div class="col-12 text-center py-5">
-                        <p class="text-muted">Không tìm thấy sản phẩm nào trong danh mục này.</p>
                     </div>
-                <?php endif; ?>
-            </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted">Không tìm thấy sản phẩm nào trong danh mục này.</p>
+                </div>
+            <?php endif; ?>
+        </div>
         </div>
     </div>
 </main>
-
+<style>
+    .card:hover .card-actions {
+        opacity: 1;
+        transition: 0.3s;
+    }
+    .card-actions a {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 <?php include_once('layouts/footer.php'); ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
