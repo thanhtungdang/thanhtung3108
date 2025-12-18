@@ -9,7 +9,6 @@ class DanhMucController
         $this->danhMuc = new DanhMuc();
     }
 
-    // Phương thức list
     public function index()
     {
 

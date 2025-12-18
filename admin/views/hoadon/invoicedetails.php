@@ -104,9 +104,11 @@ include_once("views/layouts/header.php");
                     </tbody>
 
                     <tfoot>
-                        <tr class="btn btn-danger">
-                            <td colspan="5" class="text-end fw-bold fs-5">TỔNG TIỀN THANH TOÁN:</td>
-                            <td class="fw-bold fs-5 text-whire"><?= number_format($hoaDon['tongtien']) ?> đ</td>
+                        <tr class="bg-danger text-white"> 
+                            <td colspan="5" class="text-end fw-bold fs-5" style="border: none;">TỔNG TIỀN THANH TOÁN:</td>
+                            <td class="fw-bold fs-5 text-white" style="border: none;">
+                                <?= number_format($hoaDon['tongtien']) ?> đ
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
@@ -120,17 +122,30 @@ include_once("views/layouts/header.php");
 include_once("views/layouts/footer.php");
 ?>
 <script>
-    // 1. Lấy giá trị trạng thái đang có (từ PHP đổ sang)
-    var trangThaiHienTai = <?= $hoaDon['trangthai'] ?>;
-
-    // 2. Lấy thẻ select
+document.addEventListener("DOMContentLoaded", function() {
+    var trangThaiHienTai = <?= isset($hoaDon['trangthai']) ? $hoaDon['trangthai'] : 0 ?>;
+    
     var menu = document.getElementById('select_trangthai');
 
-    // 3. Chạy qua từng dòng, cái nào nhỏ hơn hiện tại thì khóa lại
-    for (var i = 0; i < menu.options.length; i++) {
-        if (parseInt(menu.options[i].value) < trangThaiHienTai) {
-            menu.options[i].disabled = true; // Khóa dòng này
-            menu.options[i].style.color = "#d1d1d1"; // (Tuỳ chọn) Làm mờ màu chữ cho dễ nhìn
+    if (menu) {
+        if (trangThaiHienTai == 3 || trangThaiHienTai == 4) {
+             menu.disabled = true;
+        }
+
+        for (var i = 0; i < menu.options.length; i++) {
+            var optionValue = parseInt(menu.options[i].value);
+
+            var isCurrent = (optionValue === trangThaiHienTai);
+            var isNextStep = (optionValue === trangThaiHienTai + 1);
+
+            if (isCurrent || isNextStep) {
+                menu.options[i].disabled = false;
+                menu.options[i].style.color = ""; 
+            } else {
+                menu.options[i].disabled = true;
+                menu.options[i].style.color = "#d1d1d1"; 
+            }
         }
     }
+});
 </script>

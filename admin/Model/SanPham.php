@@ -11,7 +11,7 @@ class SanPham
 
     public function insert($ten, $gia, $moTa, $idDanhMuc, $anh)
     {
-        $sql = "insert into sanpham (name, price, img, mota, iddm) values (?, ?, ?, ?, ?)";
+        $sql = "insert into sanpham (name, price, img, mota, iddm, size) values (?, ?, ?, ?, ?, '')";
         pdo_execute($sql, $ten, $gia, $anh, $moTa, $idDanhMuc);
     }
 
@@ -32,15 +32,42 @@ class SanPham
         }
     }
 
-
     public function delete($id)
     {
         $sql = "update sanpham set deleted = 1 where id = ?";
         pdo_execute($sql, $id);
     }
+
     public function restore($id)
     {
         $sql = "update sanpham set deleted = 0 where id = ?";
         pdo_execute($sql, $id);
+    }
+
+    public function getAllSize($idSanPham)
+    {
+        $sql = "select * from sanpham_size where id_sanpham = ?";
+        return pdo_query($sql, $idSanPham);
+    }
+
+    public function updateSize($idSanPham, $mangTenSize, $mangSoLuong)
+    {
+        $sqlXoa = "delete from sanpham_size where id_sanpham = ?";
+        pdo_execute($sqlXoa, $idSanPham);
+
+        $chuoiHienThi = ""; 
+        $sqlThem = "insert into sanpham_size (id_sanpham, size, soluong) values (?, ?, ?)";
+
+        foreach ($mangTenSize as $index => $tenSize) {
+            $soLuong = $mangSoLuong[$index];
+
+            pdo_execute($sqlThem, $idSanPham, $tenSize, $soLuong);
+
+            $chuoiHienThi .= $tenSize . ", ";
+        }
+
+        $chuoiHienThi = rtrim($chuoiHienThi, ", ");
+        $sqlCapNhatText = "update sanpham set size = ? where id = ?";
+        pdo_execute($sqlCapNhatText, $chuoiHienThi, $idSanPham);
     }
 }

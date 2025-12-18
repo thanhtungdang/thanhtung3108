@@ -9,24 +9,21 @@ class TaiKhoanController
         include_once __DIR__ . '/../views/login.php';
     }
 
-    public function login()
-    {
-
+    public function login() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
             $user = trim($_POST['username']);
             $pass = trim($_POST['password']);
 
             $account = taikhoan_get_by_user($user);
 
-            if (!$account) {
+            if (!$account || $account['pass'] !== $pass) {
                 $error = 'Sai tên đăng nhập hoặc mật khẩu!';
                 include_once __DIR__ . '/../views/login.php';
                 return;
             }
 
-            if ($account['pass'] !== $pass) {
-                $error = 'Sai tên đăng nhập hoặc mật khẩu!';
+            if ($account['role'] == 0) {
+                $error = 'Tài khoản của bạn không có quyền truy cập trang quản trị!';
                 include_once __DIR__ . '/../views/login.php';
                 return;
             }
@@ -38,9 +35,9 @@ class TaiKhoanController
             header("Location: index.php?action=listdanhmuc");
             exit;
         }
-
         include_once __DIR__ . '/../views/login.php';
     }
+
 
     public function logout()
     {
