@@ -19,4 +19,9 @@ class HistoryCheckout {
                 WHERE c.id_hoadon = ?";
         return pdo_query($sql, $id);
     }
+
+    public function updateStatus($id, $trangthai) {
+        $sql = "UPDATE hoadon SET trangthai = ? WHERE id = ?";
+        pdo_execute($sql, $trangthai, $id);
+    }
 }
