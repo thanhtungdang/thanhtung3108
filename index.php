@@ -85,6 +85,10 @@ if(isset($_GET['action']) && $_GET['action'] != "") {
         case "HistoryCheckoutDetail":
             $HistoryCheckout->detail();
             break;
+
+        case "update_status":
+            $HistoryCheckout->update_status();
+            break;
     }
 } 
 else {

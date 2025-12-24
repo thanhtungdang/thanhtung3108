@@ -48,6 +48,15 @@ $statusInfo = isset($statusMap[$currentStatus]) ? $statusMap[$currentStatus] : [
                         <span class="info-label">Trạng thái:</span> 
                         <span class="badge <?= $statusInfo['class'] ?>"><?= $statusInfo['text'] ?></span>
                     </p>
+                    <form action="?action=update_status" method="post">
+                        <input type="hidden" name="id" value="<?= $hoaDon['id'] ?>">
+                        
+                        <p>
+                            <?php if ($hoaDon['trangthai'] == 0 || $hoaDon['trangthai'] == 1): ?>
+                                <button type="submit" class="btn btn-danger">Hủy đơn hàng</button>
+                            <?php endif; ?>
+                        </p>
+                    </form>
                 </div>
             </div>
 
